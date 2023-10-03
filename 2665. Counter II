@@ -1,0 +1,25 @@
+/**
+ * @param {integer} init
+ * @return { increment: Function, decrement: Function, reset: Function }
+ */
+const createCounter = function(init) {
+    let value = init;
+    let obj = {}
+   obj.increment = function increment(){
+       return value +=1;
+    }
+   obj.decrement = function decrement(){
+       return value -=1;
+    }
+    obj.reset = function reset(){
+       return value  = init;
+    }
+    
+    return obj;
+};
+
+
+//   const counter = createCounter(5)
+//   counter.increment(); // 6
+//   counter.reset; // 5
+//   counter.decrement; // 4
